@@ -1,5 +1,5 @@
 import { Gpio } from 'pigpio';  //apt-get install wiringpi 선행 필수,, 바인딩 하는것
-const dht = require('dht');
+const dht = require('pigpio-dht');
 
 console.log(Gpio);
 const engineControl = async(_, args, context) => {
@@ -42,7 +42,8 @@ const engineControl = async(_, args, context) => {
             console.log('checksum failed');
         });
         return 'success';
-      } else return 'success';
+      } 
+      else {return 'success';} 
     }
   } catch (err) {
     return 'error';
