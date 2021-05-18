@@ -44,7 +44,7 @@ server.start(options, (async () => {
   console.log('Graphql-express for RP server is running');
   try {
 
-    const dataPin = 5;
+    const dataPin = 4;
     const dhtType = 11; //optional
     const sensor = dht(dataPin, dhtType);
     
