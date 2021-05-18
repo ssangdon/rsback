@@ -53,6 +53,7 @@ server.start(options, (async () => {
     }, 2500); // the sensor can only be red every 2 seconds
     
     sensor.on('result', data => {
+        console.log(data);
         console.log(`temp: ${data.temperature}°c`); 
         console.log(`rhum: ${data.humidity}%`); 
     });
