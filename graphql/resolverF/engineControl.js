@@ -25,8 +25,8 @@ const engineControl = async(_, args, context) => {
       if (context.controlObject.waveEngine === false) {
         context.controlObject.waveEngine=true;
         console.log(5)
-        const dataPin = 5;
-        const dhtType = 22; //optional
+        const dataPin = 4;
+        const dhtType = 11; //optional
         const sensor = dht(dataPin, dhtType);
         
         setInterval(() => { 
