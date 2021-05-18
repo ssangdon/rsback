@@ -62,6 +62,7 @@ server.start(options, (async () => {
 });
 
     sensor.on('result', data => {
+      console.log('aaaa')
         console.log(data);
         console.log(`temp: ${data.temperature}°c`); 
         console.log(`rhum: ${data.humidity}%`); 
