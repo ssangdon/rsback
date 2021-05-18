@@ -49,16 +49,16 @@ server.start(options, (async () => {
     const sensor = dht(dataPin, dhtType);
     
     setInterval(() => { 
-        sensor.read((d)=>console.log(d));
+        sensor.read();
     }, 2500); // the sensor can only be red every 2 seconds
     
 
     sensor.on('end', data => {
-      console.log(data);
+      console.log(` start : ${data}`);
   });
 
   sensor.on('start', data => {
-    console.log(data);
+    console.log(` end : ${data}`);
 });
 
     sensor.on('result', data => {
