@@ -54,11 +54,11 @@ server.start(options, (async () => {
     
 
     sensor.on('end', data => {
-      console.log(` start : ${data}`);
+      console.log(` end : ${data}`);
   });
 
   sensor.on('start', data => {
-    console.log(` end : ${data}`);
+    console.log(` start : ${data}`);
 });
 
     sensor.on('result', data => {
